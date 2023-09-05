@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form-Validation</Form-Validation></title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.google.com/s2/u/0/favicons?domain=jacinto.design"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sign Up Today!</h1>
+      <!-- Form -->
+      <form id="form" novalidate>
+        <!-- Full Name -->
+        <div class="form-group">
+          >
+          <labal for="name">Full Name</labal>
+          <input
+            type="text"
+            id="name"
+            placeholder="Full Name"
+            name="name"
+            required
+            minlength="3"
+            maxlength="100"
+          />
+        </div>
+        <!-- Phone Number-->
+        <div class="form-group">
+          >
+          <labal for="phone">Phone Number</labal>
+          <input
+            type="tel"
+            id="phone"
+            placeholder="555-555-5555"
+            name="phone"
+            required
+            pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+          />
+        </div>
+        <!-- Email Address-->
+        <div class="form-group">
+          >
+          <labal for="email">Email Address</labal>
+          <input
+            type="email"
+            id="email"
+            placeholder="email@address.com"
+            name="email"
+            required
+          />
+        </div>
+        <!-- Website URL-->
+        <div class="form-group">
+          >
+          <labal for="website">Website URL</labal>
+          <input
+            type="url"
+            id="website"
+            placeholder="https://google.com"
+            name="website"
+            required
+          />
+        </div>
+        <!-- Password-->
+        <div class="form-group">
+          >
+          <labal for="Password1">Password</labal>
+          <input
+            type="password"
+            id="password1"
+            placeholder="Create Password (Min. 8 Character)"
+            required
+            pattern="(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$"
+            title="please include at least 1 #, $, @ and Number"
+          />
+        </div>
+        <!-- Confirm Password-->
+        <div class="form-group">
+          >
+          <labal for="Password2">confirm Password</labal>
+          <input
+            type="password"
+            id="password2"
+            placeholder="confirm Password"
+            name="password"
+            required
+            pattern="(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$"
+          />
+        </div>
+        <button type="submit">Register</button>
+      </form>
+      <!-- Error/Success Message -->
+      <div class="message-container">
+        <h3 id="message">Don't Hesitaterequired</h3>
+      </div>
+    </div>
+    <!-- script -->
+    <script src="script.js"></script>
+  </body>
+</html>
